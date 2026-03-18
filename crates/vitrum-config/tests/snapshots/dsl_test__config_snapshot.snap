@@ -1,0 +1,70 @@
+---
+source: crates/vitrum-config/tests/dsl_test.rs
+assertion_line: 97
+expression: config
+---
+session:
+  default_terminal: alacritty
+  lock_command: vitrum-lock
+input:
+  repeat_delay: 300
+  repeat_rate: 50
+  natural_scroll: false
+layout:
+  default_mode: dwindle
+  gaps_inner: 10
+  gaps_outer: 12
+  master_ratio: 0.5
+theme:
+  accent: "#FF0000"
+  background: "#1C1C2E"
+  surface: "#2A2A3E"
+  surface_raised: "#323248"
+  text: "#E0E0F0"
+  text_muted: "#8888AA"
+  border: "#3A3A5C"
+  error: "#F38BA8"
+  warning: "#FAB387"
+  success: "#A6E3A1"
+  border_width: 4
+  gaps_inner: 8
+  gaps_outer: 12
+  corner_radius: 0
+  cursor_theme: default
+  cursor_size: 24
+  icon_theme: hicolor
+  color_scheme: dark
+  sound_theme: freedesktop
+  dpi: 96
+  gdk_scale: 1
+  gdk_dpi_scale: 1
+  qt_scale_factor: 1
+fonts:
+  ui: sans-serif
+  ui_size: 11
+  mono: monospace
+  mono_size: 10
+  document: serif
+  document_size: 11
+  rendering: subpixel
+  hinting: slight
+  extra_dirs: []
+locale:
+  lang: pt_PT.UTF-8
+  lc_time: ~
+  lc_numeric: ~
+  lc_monetary: ~
+  lc_paper: ~
+  lc_measurement: ~
+  lc_collate: ~
+keybind: []
+window_rule: []
+wallpaper:
+  mode: solid
+  path: ~
+  fit: fill
+  color: "#1C1C2E"
+  dir: ~
+  interval: ~
+autostart: []
+disable_xdg_autostart: false

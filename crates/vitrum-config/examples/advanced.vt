@@ -1,0 +1,23 @@
+# Advanced Vitrum Config Example
+# This file demonstrates variables, arithmetic, and conditionals.
+
+# Define some variables for reuse
+let base_dpi = 96
+let is_hidpi = false
+let accent_color = "#1A6B8A"
+let gaps_val = 8
+
+[theme]
+accent = accent_color
+# Use a conditional for DPI
+dpi = if is_hidpi then base_dpi * 2 else base_dpi
+border_width = 2
+corner_radius = if is_hidpi then 8 else 0
+
+[layout]
+# Arithmetic for gaps
+gaps_inner = gaps_val
+gaps_outer = gaps_val * 1.5
+
+[session]
+default_terminal = "foot"

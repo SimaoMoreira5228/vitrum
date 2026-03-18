@@ -1,0 +1,19 @@
+[package]
+name = "vitrum-ipc"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+bitflags = { version = "2.11", features = ["serde"] }
+dirs = { workspace = true }
+rmp-serde = "1.3"
+rustix = { version = "1.1", features = ["net"] }
+serde = { workspace = true }
+tokio = { workspace = true, features = ["net", "io-util", "sync", "fs"] }
+tracing = { workspace = true }
+
+[dev-dependencies]
+tempfile = "3.27.0"
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }

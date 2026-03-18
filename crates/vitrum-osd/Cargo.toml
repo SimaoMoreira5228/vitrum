@@ -1,0 +1,16 @@
+[package]
+name = "vitrum-osd"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true }
+iced = { workspace = true, features = ["tokio", "svg", "advanced"] }
+iced_layershell = { workspace = true }
+serde = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+vitrum-ipc = { path = "../vitrum-ipc" }

@@ -1,0 +1,23 @@
+[package]
+name = "vitrum-lock"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "vitrum-lock"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+chrono = { workspace = true }
+dirs.workspace = true
+iced = { workspace = true, features = ["tokio", "image"] }
+iced_sessionlock.workspace = true
+pam.workspace = true
+serde.workspace = true
+toml.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+vitrum-config = { path = "../vitrum-config" }
+vitrum-ipc = { path = "../vitrum-ipc" }

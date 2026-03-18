@@ -1,0 +1,24 @@
+export WAYLAND_DISPLAY=wayland-0
+export XDG_SESSION_TYPE=wayland
+
+if ! groups | grep -q seat; then
+    echo "Warning: User not in seat group. TTY mode may not work."
+fi
+
+export LIBINPUT_DEVICES="/dev/input/event*"
+
+if ! pgrep -x seatd > /dev/null; then
+    if command -v seatd >/dev/null 2>&1; then
+        if sudo -n seatd 2>/dev/null; then
+            echo "Started seatd"
+        else
+            echo "Note: seatd not running (may require sudo)"
+        fi
+    fi
+fi
+
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+    eval $(dbus-launch --sh-syntax)
+fi
+
+exec /usr/bin/vitrum --backend drm
