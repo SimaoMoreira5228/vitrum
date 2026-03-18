@@ -1,0 +1,21 @@
+export XDG_SESSION_TYPE=wayland
+export WAYLAND_DISPLAY=wayland-0
+export QT_QPA_PLATFORM=wayland
+export GDK_BACKEND=wayland
+export MOZ_ENABLE_WAYLAND=1
+export SDL_VIDEODRIVER=wayland
+
+if command -v seatd >/dev/null 2>&1; then
+    if [ "$EUID" -eq 0 ]; then
+        seatd &
+    else
+        if ! pgrep -x seatd > /dev/null; then
+            echo "Warning: seatd not running. TTY mode may not work."
+            echo "Run: sudo systemctl start seatd"
+        fi
+    fi
+fi
+
+if [ -n "$XDG_SEAT" ]; then
+    export LIBINPUT_SEAT="$XDG_SEAT"
+fi

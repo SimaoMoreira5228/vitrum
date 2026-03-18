@@ -1,0 +1,25 @@
+[package]
+name = "vitrum-clip"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+
+[dependencies]
+anyhow = { workspace = true }
+chrono = { workspace = true }
+iced = { version = "0.14", features = ["tokio", "image"] }
+iced_layershell = "0.16"
+image = { workspace = true }
+serde = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+vitrum-ipc = { path = "../vitrum-ipc" }
+wl-clipboard-rs = "0.9.0"
+wayland-client = "0.31"
+wayland-protocols = { version = "0.32", features = ["staging", "client"] }
+wayland-protocols-wlr = { version = "0.3", features = ["client"] }
+os_pipe = "1.1"
+dirs = { workspace = true }
+toml = { workspace = true }
+tempfile = "3.10"

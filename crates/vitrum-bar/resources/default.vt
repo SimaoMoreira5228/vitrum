@@ -1,0 +1,33 @@
+let bar_height = 32
+
+# Default theme colors (will be overridden by system theme if available)
+let bg = "#1c1c28f2"
+let accent = "#1a6b8a"
+let muted = "#8888aa"
+let white = "#ffffff"
+
+[bar]
+height = bar_height
+position = "top"
+
+left = [
+    workspaces(show_empty = true),
+    spacer(8),
+    active_window(max_length = 40)
+]
+
+center = [
+    # text("Vitrum", color = accent, size = 14)
+]
+
+right = [
+    row([
+        cpu(),
+        spacer(16),
+        memory(),
+        spacer(16),
+        battery(),
+        spacer(16),
+        clock(format = "%H:%M  %a %d %b")
+    ])
+]

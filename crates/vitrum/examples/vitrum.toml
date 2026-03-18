@@ -1,0 +1,107 @@
+# Vitrum Configuration File
+#
+# This is the default configuration file for Vitrum Wayland compositor.
+# Copy this to ~/.config/vitrum/config.toml to customize your setup.
+# If no config file exists, Vitrum will create one automatically.
+
+# Appearance settings
+[appearance]
+# Background color (RGB format)
+background = "#1a1a2e"
+
+# Window border color
+active_border = "#7aa2f7"
+inactive_border = "#565f89"
+border_width = 2
+
+# Window gap size in pixels
+gaps = 8
+
+# Layout settings
+[layout]
+# Default layout mode: "dwindle" or "master-stack"
+default_mode = "dwindle"
+
+# Master-stack specific settings
+master_width = 0.5
+
+# Dwindle specific settings
+dwindle_panes = 2
+
+# Workspace settings
+[workspace]
+# Number of workspaces per output
+count = 10
+
+# Keybindings
+[keybinds]
+# Terminal
+super_return = "spawn foot"
+
+# Window management
+super_shift_q = "kill-focused"
+
+# Layout switching
+super_space = "toggle-floating"
+super_f = "toggle-fullscreen"
+
+# Window focus
+super_h = "focus-left"
+super_j = "focus-down"
+super_k = "focus-up"
+super_l = "focus-right"
+
+# Window movement
+super_shift_h = "move-left"
+super_shift_j = "move-down"
+super_shift_k = "move-up"
+super_shift_l = "move-right"
+
+# Workspace switching
+super_1 = "workspace 1"
+super_2 = "workspace 2"
+super_3 = "workspace 3"
+super_4 = "workspace 4"
+super_5 = "workspace 5"
+super_6 = "workspace 6"
+super_7 = "workspace 7"
+super_8 = "workspace 8"
+super_9 = "workspace 9"
+super_0 = "workspace 10"
+
+# Move window to workspace
+super_shift_1 = "move-to-workspace 1"
+super_shift_2 = "move-to-workspace 2"
+super_shift_3 = "move-to-workspace 3"
+super_shift_4 = "move-to-workspace 4"
+super_shift_5 = "move-to-workspace 5"
+super_shift_6 = "move-to-workspace 6"
+super_shift_7 = "move-to-workspace 7"
+super_shift_8 = "move-to-workspace 8"
+super_shift_9 = "move-to-workspace 9"
+super_shift_0 = "move-to-workspace 10"
+
+# Reload configuration
+super_shift_r = "reload-config"
+
+# Compositor control
+super_shift_c = "quit"
+
+# Wallpaper settings
+[wallpaper]
+# Wallpaper type: "solid", "image", or "slideshow"
+type = "solid"
+
+# Solid color (for type = "solid")
+color = "#1a1a2e"
+
+# Autostart applications
+[autostart]
+# Applications to start on compositor launch
+# terminal = "foot"
+# wallpaper = "feh --bg-fill /path/to/wallpaper.jpg"
+
+# XWayland settings
+[xwayland]
+# Enable XWayland support
+enabled = true

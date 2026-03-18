@@ -1,0 +1,13 @@
+[package]
+name = "vitrum-theme"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+dirs.workspace = true
+tracing.workspace = true
+vitrum-config = { path = "../vitrum-config" }
+vitrum-ipc = { path = "../vitrum-ipc" }
+zbus.workspace = true

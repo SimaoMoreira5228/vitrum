@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Vitrum
+Comment=Vitrum Wayland Compositor
+Exec=/usr/bin/vitrum --backend drm
+Type=Application
+DesktopNames=Vitrum
+X-KDE-Wayland-Env=VITRUM=1
+X-KDE-Wayland-Env=WAYLAND_DISPLAY=wayland-0
